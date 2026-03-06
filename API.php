@@ -8,11 +8,12 @@ require __DIR__ . '/vendor/autoload.php';
 $app = AppFactory::create();
 $app->addRoutingMiddleware();
 $app->addErrorMiddleware(true, true, true);
+$app->setBasePath('/verificaasorpresa/API.php');
 
 // Funzione helper per la connessione al DB
 function getDB() {
     $host = '127.0.0.1';
-    $db   = 'slim_framework';
+    $db   = 'slim framework';
     $user = 'root'; // Cambia con il tuo utente
     $pass = '';     // Cambia con la tua password
     $charset = 'utf8mb4';
